@@ -1,24 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 
 const DetailWrapper = styled.div`
-	margin-top: 10rem;
-	margin-bottom: 5rem;
+	max-width:1100px;
+	padding:3rem 1rem 0rem;
+	margin: 0 auto 3rem;
 	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+
 	.active {
 		background: linear-gradient(35deg, #494949, #313131);
 		color: #fff;
 	}
 	h2 {
-		margin-bottom: 2rem;
+		margin-bottom: 1.5rem;
 	}
+	img {max-width:100%;}
 	li {
 		font-size: 1rem;
 		line-height: 1.5rem;
+		margin-bottom:0.5rem
 	}
-	ul {
-		margin-top: 2rem;
+	ul, ol {
+		margin:0;
+		margin-top: 1.5rem;
+		list-style-position: inside; 
 	}
 `;
 
@@ -28,16 +36,17 @@ const Button = styled.button`
 	background: #fff;
 	border: 2px solid black;
 	margin-right: 2rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	font-weight: 600;
 `;
 
 const Info = styled.div`
-	margin-left: 10rem;
+	margin-left: 0rem;
 `
 
 const InfoSect = styled.div`
-	margin-bottom: 2rem;
+	margin-bottom: 0rem;
+	line-height:1.55rem;
 `
 
 export default function Recipe() {

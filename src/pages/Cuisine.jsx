@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 
 const Grid = styled(motion.div)`
+	max-width:1100px;
+	margin: 0 auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-	grid-gap: 3rem;
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+	grid-gap: 1.5rem;
 `;
 
 const Card = styled.div`
@@ -49,7 +51,7 @@ export default function Cuisine() {
 				return (
 					<Card key={item.id}>
 						<Link to={"/recipe/"+item.id}>
-							<img src={item.image} alt={item.image} />>
+							<img src={item.image} alt={item.image} />
 							<h4>{item.title}</h4>
 						</Link>
 					</Card>
